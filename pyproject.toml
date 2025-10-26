@@ -1,0 +1,40 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "ersilia-ml-benchmarks"
+version = "0.0.1"
+description = "Quick benchmarking of AutoML tools"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "GPLv3" }
+authors = [
+  { name = "Ersilia Open Source Initiative", email = "hello@ersilia.io" },
+]
+keywords = ["qsar", "machine-learning", "chemistry", "computer-aided-drug-design"]
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "polaris-lib==0.13.0",
+    "pandas==2.3.0",
+]
+
+[project.optional-dependencies]
+lazyqsar = [
+  "lazyqsar[descriptors]==2.0.2",
+]
+
+[project.urls]
+"Source Code" = "https://github.com/ersilia-os/ersilia-ml-benchmark"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+exclude = ["utilities"]

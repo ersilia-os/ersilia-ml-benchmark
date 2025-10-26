@@ -1,0 +1,14 @@
+benchmark,score
+tdcommons/bioavailability-ma,0.6577984702361157
+tdcommons/hia-hou,0.98559670781893
+tdcommons/pgp-broccatelli,0.9087576646227674
+tdcommons/bbb-martins,0.8440040650406504
+tdcommons/cyp2c9-veith,0.7395236429051415
+tdcommons/cyp2d6-veith,0.6310392922772854
+tdcommons/cyp3a4-veith,0.8353298114064721
+tdcommons/cyp2c9-substrate-carbonmangels,0.4514799202060086
+tdcommons/cyp2d6-substrate-carbonmangels,0.690848834863854
+tdcommons/cyp3a4-substrate-carbonmangels,0.6099683544303798
+tdcommons/herg,0.8051546391752578
+tdcommons/ames,0.8149738588967866
+tdcommons/dili,0.8934782608695653
