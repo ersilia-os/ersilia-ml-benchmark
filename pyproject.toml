@@ -27,7 +27,7 @@ dependencies = [
 
 [project.optional-dependencies]
 lazyqsar = [
-  "lazyqsar[descriptors]==2.1.0",
+  "lazyqsar[descriptors]==2.1.2",
 ]
 
 [project.urls]

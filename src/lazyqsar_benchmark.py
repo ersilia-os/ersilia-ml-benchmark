@@ -12,7 +12,7 @@ root = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(root)
 from defaults import benchmarks
 
-results_folder = os.path.join(root, "..", "results", "test")
+results_folder = os.path.join(root, "..", "results", "lazyqsar")
 if not os.path.join(results_folder):
     os.mkdir(results_folder)
 
