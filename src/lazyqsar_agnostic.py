@@ -19,7 +19,8 @@ from defaults import benchmarks
 
 m = "eos3cf4"
 
-### To run this pipeline please make sure to calculate Ersilia descriptors first
+### To run this pipeline please make sure to calculate Ersilia descriptors first and save it in the /descriptors folder
+### Use the following: eosid_test/train_benchmarkname and .h5 as output
 
 results_folder = os.path.join(root, "..", "results", "lq_agnostic", m)
 if not os.path.exists(results_folder):
@@ -39,23 +40,6 @@ def load_dataset(benchmark):
     train_y = train.targets.tolist()
     test_x = test.inputs.tolist()
     return train_x, train_y, test_x
-
-def save_dataset_for_ersilia(benchmark_name):
-    benchmark = po.load_benchmark(benchmark_name)
-    smiles_train, y_train, smiles_test = load_dataset(benchmark)
-    df1 = pd.DataFrame({"smiles":smiles_train})
-    df2 = pd.DataFrame({"smiles":smiles_test})
-    df3 = pd.DataFrame({"y_true": y_train})
-    df1.to_csv(os.path.join(descriptor_folder, f"smiles_train_{benchmark_name.split("/")[1]}.csv"), index=False)
-    df2.to_csv(os.path.join(descriptor_folder, f"smiles_test_{benchmark_name.split("/")[1]}.csv"), index=False)
-    df3.to_csv(os.path.join(descriptor_folder, f"y_train_{benchmark_name.split("/")[1]}.csv"), index=False)
-
-### RUN this once in your local as it will be gitignored
-"""
-for b in benchmarks.keys():
-    benchmark_name = b.split("/")[1]
-    save_dataset_for_ersilia(b)
-"""
 
 def load_h5_dataset(h5_file_train, h5_file_test):
     with h5py.File(h5_file_train, "r") as f:
