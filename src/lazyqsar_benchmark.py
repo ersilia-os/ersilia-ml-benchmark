@@ -14,9 +14,6 @@ from defaults import benchmarks
 
 version = sys.argv[1]
 
-benchmarks = {
-    "tdcommons/bioavailability-ma":0.729}
-
 results_folder = os.path.join(root, "..", "results", f"lazyqsar_{version}")
 if not os.path.join(results_folder):
     os.makedirs(results_folder, exist_ok=True)
@@ -24,7 +21,6 @@ if not os.path.join(results_folder):
 model_folder = os.path.join(root, "..", "models", f"lazyqsar_{version}")
 if not os.path.join(model_folder):
     os.makedirs(model_folder, exist_ok=True)
-
 
 def load_dataset(benchmark):
     train, test = benchmark.get_train_test_split()
@@ -53,7 +49,7 @@ def fit_and_evaluate(benchmark_name, mode, output_dir, clean=True, onnx=True,):
         shutil.rmtree(output_dir)
     return results
 
-for mode in ["fast"]:
+for mode in ["default", "slow"]:
     scores = {}
     results_subfolder = os.path.join(results_folder, mode)
     if not os.path.exists(results_subfolder):
@@ -73,4 +69,4 @@ for mode in ["fast"]:
         scores[b] = score
 
     df = pd.DataFrame(list(scores.items()), columns=["benchmark", "score"])
-    #df.to_csv(os.path.join(results_subfolder, "summary_scores.csv"), index=False)
+    df.to_csv(os.path.join(results_subfolder, "summary_scores.csv"), index=False)
