@@ -1,0 +1,23 @@
+{
+    "output_dir": "/home/gturon/github/ersilia-os/ersilia-ml-benchmark/preds/tdcomms/hia-hou",
+    "model_dir": "/home/gturon/github/ersilia-os/ersilia-ml-benchmark/models/tdcomms/hia-hou",
+    "time_stamp": 1766955032,
+    "elapsed_time": 123,
+    "mode": "predict",
+    "steps": [
+        "initialize",
+        "normalize_input",
+        "standardize",
+        "tasks",
+        "merge",
+        "setup_check",
+        "clean",
+        "raw_descriptions",
+        "treated_descriptions",
+        "manifolds",
+        "lazy-qsar",
+        "simple_evaluation",
+        "report",
+        "finish"
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "output_dir": "/home/gturon/github/ersilia-os/ersilia-ml-benchmark/models/tdcomms/cyp2c9-veith",
+    "model_dir": "/home/gturon/github/ersilia-os/ersilia-ml-benchmark/models/tdcomms/cyp2c9-veith",
+    "time_stamp": 1766968497,
+    "elapsed_time": 10445,
+    "mode": "fit",
+    "steps": [
+        "initialize",
+        "normalize_input",
+        "standardise_smiles",
+        "create_folds",
+        "tasks",
+        "merge",
+        "setup_check",
+        "clean",
+        "raw_descriptions",
+        "treated_descriptions",
+        "manifolds",
+        "lazy-qsar",
+        "simple_evaluation",
+        "report",
+        "finish"
+    ]
+}

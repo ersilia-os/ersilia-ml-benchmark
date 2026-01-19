@@ -1,0 +1,23 @@
+{
+    "output_dir": "/home/gturon/github/ersilia-os/ersilia-ml-benchmark/preds/tdcomms/ames",
+    "model_dir": "/home/gturon/github/ersilia-os/ersilia-ml-benchmark/models/tdcomms/ames",
+    "time_stamp": 1767004743,
+    "elapsed_time": 898,
+    "mode": "predict",
+    "steps": [
+        "initialize",
+        "normalize_input",
+        "standardize",
+        "tasks",
+        "merge",
+        "setup_check",
+        "clean",
+        "raw_descriptions",
+        "treated_descriptions",
+        "manifolds",
+        "lazy-qsar",
+        "simple_evaluation",
+        "report",
+        "finish"
+    ]
+}
