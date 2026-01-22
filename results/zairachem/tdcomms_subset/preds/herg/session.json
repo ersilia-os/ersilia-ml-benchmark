@@ -1,0 +1,23 @@
+{
+    "output_dir": "/home/gturon/github/ersilia-os/ersilia-ml-benchmark/preds/tdcomms/herg",
+    "model_dir": "/home/gturon/github/ersilia-os/ersilia-ml-benchmark/models/tdcomms/herg",
+    "time_stamp": 1768874317,
+    "elapsed_time": 106,
+    "mode": "predict",
+    "steps": [
+        "initialize",
+        "normalize_input",
+        "standardize",
+        "tasks",
+        "merge",
+        "setup_check",
+        "clean",
+        "raw_descriptions",
+        "treated_descriptions",
+        "manifolds",
+        "lazy-qsar",
+        "simple_evaluation",
+        "report",
+        "finish"
+    ]
+}
